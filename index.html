@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <style>
+    *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    }
+    body{
+        background: hsl(213, 44%, 95%);
+        height: 100svh;
+        display: grid;
+        place-items: center;   
+    }
+    main{
+        width: 900px;
+        height: 350px;
+        display: flex;
+        background: white;
+        border-radius: 25px;
+    }
+    .image{
+        width: 350px;
+        background: url('./images/drawers.jpg');
+        background-position: top 0px left -40px;
+        background-size: 145%;
+        border-radius: 25px 0px 0px 25px;
+    }
+    .content{
+        width: 550px;
+        padding: 40px 60px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .heading{
+        font-size: 28px;
+        font-weight: 700;
+        color:hsl(217, 19%, 35%);
+    }
+    .desc{
+        font-size: 17px;
+        color: hsl(214, 17%, 51%);
+    }
+    .content-footer{
+        display: flex;
+        justify-content: space-between;
+    }
+    .profile{
+        display: flex;
+    }
+    .profile>.profile-avatar>img{
+        width: 60px;
+        border-radius: 100%;
+    }
+    .profile-info{
+        margin: auto 20px;
+    }
+    .profile-info>p{
+        font-size: 15px;
+    }
+    .profile-info>p:first-child{
+        font-weight: 700;
+        color: hsl(217, 19%, 35%);
+    }
+    .profile-info>p:last-child{
+        font-weight: 700;
+        color: hsl(214, 17%, 51%);
+    }
+    .share{
+        background: hsl(213, 44%, 95%);
+        margin: auto 0px;
+        width: 40px;
+        height: 40px;
+        display: grid;
+        place-items: center;
+        border-radius: 100%;
+        transition: all 0.7s;
+        cursor: pointer;
+    }
+    .share:hover{
+        background:hsl(217, 19%, 35%);
+        fill: white;
+    }
+    .dropup {
+        position: relative;
+    }
+    .share-text{
+        color: hsl(214, 17%, 51%);
+    }
+    .dropup-menu{
+        display: flex;
+        gap: 15px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        background: hsl(217, 19%, 35%);
+        padding: 15px 30px;
+        border-radius: 10px;
+        position: absolute;
+        z-index: 1;
+    }
+    .dropup-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        top:-70px;
+        right:-25px;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+      .dropup:hover .dropup-content {
+        display: block;
+      }
+    .arrow-block{
+        position: absolute;
+        background: hsl(217, 19%, 35%);
+        width: 25px;
+        height: 25px;
+        transform: rotate(45deg);
+        top:38px;
+        right: 100px;
+        z-index: 2;
+    }
+    .index-upper{
+        z-index: 3;
+    }
+    @media (max-width:500px) {
+    main{
+        flex-direction: column;
+        top: 50px;
+        position: relative;
+        width: 350px;
+        margin-bottom: 50px;
+        height: 586px;
+    }
+    .image{
+        border-radius: 10px 10px 0 0;
+    }
+    </style>
+    <title>Frontend Mentor | Article preview component</title>
+</head>
+<body>
+  <main>
+    <div class="image">
+    </div>
+    <div class="content">
+      <div class="heading">
+        Shift the overall look and feel by adding these wonderful 
+        touches to furniture in your home
+      </div>
+      <div class="desc">
+        Ever been in a room and felt like something was missing? Perhaps 
+        it felt slightly bare and uninviting. I’ve got some simple tips 
+        to help you make any room feel complete.
+      </div>
+      <div class="content-footer">
+        <div class="profile">
+          <div class="profile-avatar">
+            <img src="./images/avatar-michelle.jpg" alt="">
+          </div>
+          <div class="profile-info">
+            <p>Michelle Appleton</p>
+            <p>28 Jun 2020</p>
+          </div>
+        </div>
+        <div class="share dropup">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13"><path fill="#6E8098" class="share" d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/></svg>
+          <div class="dropup-content">
+            <div class="dropup-menu">
+              <div class="arrow-block"></div>
+              <div class="share-text">
+                share
+              </div>
+              <div class="facebook index-upper">
+                <img src="./images/icon-facebook.svg" alt="">
+              </div>
+              <div class="twitter">
+                <img src="./images/icon-twitter.svg" alt="">
+              </div>
+              <div class="pinterest">
+                <img src="./images/icon-pinterest.svg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>  
+    </div>
+  </main>
+</body>
+</html>
+
+
